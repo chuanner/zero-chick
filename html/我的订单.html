@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>我的订单</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no，minimal-ui">
+		<meta name="renderer" content="webkit">
+		<meta name="screen-orientation" content="portrait">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="format-detection" content="telephone=no,email=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+		<link rel="stylesheet" type="text/css" href="../css/xiaoji.css" />
+		<script type="text/javascript" src="../js/fastclick.js"></script>
+		<script type="text/javascript" src="../js/adapt-screen.js"></script>
+	</head>
+
+	<body>
+		<div class="globel-gray-wrap">
+			<ul class="detal-nav">
+				<li class="denav detail-active">待付款</li><li class="denav">已付款</li>
+			</ul>
+			<!--未付款-->
+			<div class="detail-pay" style="display: none;">
+				<div class="detail-box">
+					<p>订单编号：<span>1001221110</span></p>
+					<p>订单时间：<span>2016-10-10 12:12:10</span></p>
+					<p>商品名称：<span>0点小鸡--情侣版</span></p>
+					<p>商品单价：<span>￥166.00</span></p>
+					<p>商品数量：<span>2个</span></p>
+					<p>应付金额：<span>￥330.00</span></p>
+				</div>
+				<a href="#" class="detail-btn">去付款</a>
+				
+				<div class="detail-box">
+					<p>订单编号：<span>1001221110</span></p>
+					<p>订单时间：<span>2016-10-10 12:12:10</span></p>
+					<p>商品名称：<span>0点小鸡--情侣版</span></p>
+					<p>商品单价：<span>￥166.00</span></p>
+					<p>商品数量：<span>2个</span></p>
+					<p>应付金额：<span>￥330.00</span></p>
+				</div>
+				<a href="#" class="detail-btn">去付款</a>
+			</div>
+			
+			<!--已付款-->
+			<div class="detail-pay">
+				<div class="detail-box">
+					<p>订单编号：<span>1001221110</span></p>
+					<p>订单时间：<span>2016-10-10 12:12:10</span></p>
+					<p>商品名称：<span>0点小鸡--情侣版</span></p>
+					<p>商品单价：<span>￥166.00</span></p>
+					<p>商品数量：<span>2个</span></p>
+					<p>应付金额：<span>￥330.00</span></p>
+				</div>
+				<a href="#" class="detail-btn">查看物流信息</a>
+				
+				<div class="detail-box">
+					<p>订单编号：<span>1001221110</span></p>
+					<p>订单时间：<span>2016-10-10 12:12:10</span></p>
+					<p>商品名称：<span>0点小鸡--情侣版</span></p>
+					<p>商品单价：<span>￥166.00</span></p>
+					<p>商品数量：<span>2个</span></p>
+					<p>应付金额：<span>￥330.00</span></p>
+				</div>
+				<a href="#" class="detail-btn">查看物流信息</a>
+			</div>
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".denav").on("click",function(){
+				var index = $(this).index();
+				$(this).addClass("detail-active").siblings().removeClass("detail-active");
+				$(".detail-pay").eq(index).show().siblings(".detail-pay").hide();
+			})
+		})
+	</script>
+
+</html>

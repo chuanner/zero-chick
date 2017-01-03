@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>订单信息</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no，minimal-ui">
+		<meta name="renderer" content="webkit">
+		<meta name="screen-orientation" content="portrait">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="format-detection" content="telephone=no,email=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+		<link rel="stylesheet" type="text/css" href="../css/xiaoji.css" />
+		<script type="text/javascript" src="../js/fastclick.js"></script>
+		<script type="text/javascript" src="../js/adapt-screen.js"></script>
+		<style>
+			td {
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<div class="globel-gray-wrap">
+
+			<div class="rl-bar">
+				<a class="rl-cancel" href="#">取消</a>
+				<span>选择日期</span>
+			</div>
+
+			<div class="calendar">
+				<div class="date date1">
+					<span class="selectDate">
+			            <select class="selectYear selectYear1" disabled="disabled">	
+			            </select><select class="selectMonth selectMonth1" disabled="disabled">
+			                <option value="1">1月</option>
+			                <option value="2">2月</option>
+			                <option value="3">3月</option>
+			                <option value="4">4月</option>
+			                <option value="5">5月</option>
+			                <option value="6">6月</option>
+			                <option value="7">7月</option>
+			                <option value="8">8月</option>
+			                <option value="9">9月</option>
+			                <option value="10">10月</option>
+			                <option value="11">11月</option>
+			                <option value="12">12月</option>
+			            </select>
+			        </span>
+				</div>
+
+				<table class="calTable calTable1">
+					<thead>
+						<tr>
+							<th>日</th>
+							<th>一</th>
+							<th>二</th>
+							<th>三</th>
+							<th>四</th>
+							<th>五</th>
+							<th>六</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+
+						</tr>
+						<tr>
+
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+
+						</tr>
+						<tr>
+
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+
+						</tr>
+						<tr>
+
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+
+						</tr>
+						<tr id="last-tr1">
+
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+
+						</tr>
+						<tr id="last-tr2">
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="calendar">
+				<div class="date date2">
+
+					<span class="selectDate">
+			            <select class="selectYear selectYear2" disabled="disabled">	
+			            </select><select class="selectMonth selectMonth2" disabled="disabled">
+			                <option value="1">1月</option>
+			                <option value="2">2月</option>
+			                <option value="3">3月</option>
+			                <option value="4">4月</option>
+			                <option value="5">5月</option>
+			                <option value="6">6月</option>
+			                <option value="7">7月</option>
+			                <option value="8">8月</option>
+			                <option value="9">9月</option>
+			                <option value="10">10月</option>
+			                <option value="11">11月</option>
+			                <option value="12">12月</option>
+			            </select>
+			        </span>
+				</div>
+
+				<table class="calTable calTable2">
+					<thead>
+						<tr>
+							<th>日</th>
+							<th>一</th>
+							<th>二</th>
+							<th>三</th>
+							<th>四</th>
+							<th>五</th>
+							<th>六</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+
+						</tr>
+						<tr>
+
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+
+						</tr>
+						<tr>
+
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+
+						</tr>
+						<tr>
+
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+
+						</tr>
+						<tr>
+
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+
+						</tr>
+						<tr>
+
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+							<td>
+								<span class="rl-state"></span>
+								<span class="rl-day"></span>
+							</td>
+
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<p class="rl-txt">温馨提示：我们会努力按照您指定的时间配送，但因天气、交通等各类因素影响，您的订单有可能会有延误现象！</p>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			+ function($) {
+
+				var prevChoose = $();
+
+				function Calendar() {
+					this.init.apply(this, arguments);
+				}
+				Calendar.prototype = {
+					init: function(tableId, dateId, selectY, selectM, startYear, endYear) {
+						var table = $(tableId);
+						var dateObj = $(dateId);
+						var selectY = $(selectY);
+						var selectM = $(selectM);
+						this._setSelectYear(selectY, startYear, endYear);
+						if(table.hasClass("calTable1")) {
+							this._setTodayDate(table, selectY, selectM);
+						}
+
+						if(table.hasClass("calTable2")) {
+							this._setNextMonthDate(table, selectY, selectM);
+						}
+
+					},
+					//设置年份
+					_setSelectYear: function(selectY, startYear, endYear) {
+						var html = "";
+						var date = new Date();
+						if(!endYear) {
+							var endYear = date.getFullYear();
+						} else {
+							var endYear = endYear;
+						}
+						for(var i = startYear; i <= endYear; i++) {
+							var _option = $('<option value=" ' + i + ' ">' + i + '年</option>');
+							selectY.append(_option);
+						}
+					},
+
+					//显示本月
+					_setTodayDate: function(table, selectY, selectM) {
+						var _this = this;
+						var date = new Date();
+						var year = date.getFullYear(),
+							month = date.getMonth(),
+							_date = date.getDate(),
+							day = date.getDay();
+						var n = parseInt(_date / 7);
+						var l = n % 7;
+						if(l >= day) {
+							var todayTd = day + 7 * l;
+						} else {
+							var todayTd = day + 7 * (l + 1);
+						}
+						var startTd = todayTd - _date + 1 - 7;
+						var monthDays = this._getMonthDays(year, month);
+						var td = table.children("tbody").children("tr").children("td");
+						this._setSelectValue(selectY, year);
+						this._setSelectValue(selectM, month + 1);
+						for(var i = startTd, len = td.length; i < len; i++) {
+							var _td = td.eq(i);
+							var j = i - startTd + 1;
+							//date-time
+							var dateTime = year + '-' + month + 1 + '-' + j;
+							_td.attr("date-time", dateTime);
+							_td.children(".rl-day").html(j);
+							_td.children(".rl-state").html('<span class="color-green">可选</span>');
+							_td.addClass("date");
+							if(j == _date) {
+								_td.prevAll("td").addClass("none").children(".rl-state").html('<span class="color-red">售罄</span>');
+								_td.addClass("choose").children(".rl-state").html('<span>可选</span>');
+								prevChoose = _td;
+							}
+							_this._clickOn(_td);
+							if(j >= monthDays) {
+								break;
+							}
+						}
+					},
+
+					//显示下月
+					_setNextMonthDate: function(table, selectY, selectM) {
+						var _this = this;
+						var date = new Date();
+						var year = date.getFullYear(); //年
+						var month = date.getMonth() + 1; //月
+						var startTd = $("#last-tr1 .date").length;
+						if(startTd == 7) {
+							startTd = 1;
+						}
+						var monthDays = this._getMonthDays(year, month);
+						var td = table.children("tbody").children("tr").children("td");
+
+						//显示年月
+						this._setSelectValue(selectY, year);
+						this._setSelectValue(selectM, month + 1);
+
+						for(var i = startTd, len = td.length; i < len; i++) {
+							var _td = td.eq(i);
+							var j = i - startTd + 1;
+							//date-time
+							var dateTime = year + '-' + (month + 1) + '-' + j;
+							_td.attr("date-time", dateTime);
+							_td.children(".rl-day").html(j);
+							_td.children(".rl-state").html('<span class="rl-state color-green">可选</span>');
+							_td.addClass("date");
+							if(j >= monthDays) {
+								break;
+							}
+						}
+						_this._clickOn(_td.closest(".globel-gray-wrap"));
+					},
+
+					//点击选择日期
+					_clickOn: function(obj) {
+						obj.off('click.date').on("click.date", "td.date", function() {
+							if(!$(this).hasClass("none")) {
+								prevChoose.removeClass("choose").children(".rl-state").html('<span class="color-green">可选</span>');
+								prevChoose = $(this).addClass("choose");
+								$(this).children(".rl-state").html('<span>已选</span>');
+							};
+						})
+					},
+
+					//设置下拉菜单默认值
+					_setSelectValue: function(selectObj, value) {
+						var selectList = selectObj.children('option');
+						for(var i = 0, len = selectList.length; i < len; i++) {
+							var _option = selectList[i];
+							if(parseInt(_option.value) == value) {
+								_option.selected = true;
+								break;
+							}
+						}
+					},
+
+					//返回某个月的天数
+					_getMonthDays: function(year, month) {
+						var monthAry = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+						if(year % 400 == 0) {
+							monthAry[1] = 29;
+						} else {
+							if(year % 4 == 0 && year % 100 != 0) {
+								monthAry[1] = 29;
+							}
+						}
+						return monthAry[month];
+					}
+				}
+				new Calendar(".calTable1", ".date1", ".selectYear1", ".selectMonth1", 2014, 2030);
+				new Calendar(".calTable2", ".date2", ".selectYear2", ".selectMonth2", 2014, 2030);
+			}(window.jQuery);
+		});
+	</script>
+
+</html>

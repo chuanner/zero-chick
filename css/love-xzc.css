@@ -1,0 +1,416 @@
+@charset "utf-8";
+
+/*
+ * 样式重置
+ */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 20px;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: "Tahoma", "PingFang SC", "Helvetica Neue", "Hiragino Sans GB", "Segoe UI", "Microsoft YaHei", "微软雅黑", sans-serif;
+}
+
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hgroup,
+p,
+blockquote,
+figure,
+form,
+fieldset,
+input,
+legend,
+pre,
+abbr,
+button {
+	margin: 0;
+	padding: 0;
+}
+
+a,
+select,
+button,
+input {
+	-webkit-appearance: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	border: none;
+}
+
+::-webkit-input-placeholder {
+	/* WebKit browsers */
+	color: #BDBDBD;
+	/*font-size: 0.7rem;*/
+}
+
+:-moz-placeholder {
+	/* Mozilla Firefox 4 to 18 */
+	color: #BDBDBD;
+	/*font-size: 0.7rem;*/
+}
+
+::-moz-placeholder {
+	/* Mozilla Firefox 19+ */
+	color: #BDBDBD;
+	/*font-size: 0.7rem;*/
+}
+
+:-ms-input-placeholder {
+	/* Internet Explorer 10+ */
+	color: #BDBDBD;
+	/*font-size: 0.7rem;*/
+}
+
+button:focus,
+select:focus,
+input:focus,
+textarea:focus {
+	outline: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+td {
+	padding: 0 0.4em;
+}
+
+img {
+	max-width: 100%;
+}
+
+small {
+	font-size: 60%;
+}
+
+
+/*
+ * 修复页面效果不按照指定样式渲染的bug
+ */
+
+div,
+p,
+a {
+	max-height: 9999px;
+}
+
+
+/*=========全局样式===========*/
+
+
+/*灰色全局容器*/
+
+.globel-gray-wrap {
+	width: 100%;
+	height: 100%;
+	background: #f7f7f7;
+}
+
+
+/*白色全局容器*/
+
+.globel-white-wrap {
+	width: 100%;
+	height: 100%;
+	background: #FFFFFF;
+}
+
+.globel-white-wrap-posi {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	background: #FFFFFF;
+	padding-bottom: 9.32rem;
+}
+
+
+/*=========组件==========*/
+
+
+/*tab导航栏*/
+
+.nav-bar {
+	width: 100%;
+	height: 3rem;
+	display: flex;
+}
+
+.nav-bar li {
+	display: inline-block;
+	width: 25%;
+	height: 3rem;
+	text-align: center;
+	font-size: 0.7rem;
+	color: #666666;
+}
+
+.nav-bar li span {
+	display: inline-block;
+	width: 100%;
+	height: 1rem;
+	margin-top: 1rem;
+}
+
+.nav-bar li:nth-child(1) span,
+.nav-bar li:nth-child(2) span,
+.nav-bar li:nth-child(3) span {
+	border-right: 1.5px solid #e5e5e5;
+}
+
+
+/*日期显示条*/
+
+.date-bar {
+	position: relative;
+	width: 100%;
+	height: 2.3rem;
+	padding: 0 15px 0 15px;
+	background: #e2e2e2;
+	font-size: 0.8rem;
+	color: #262626;
+	line-height: 2.4rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.date-bar:after,
+{
+	content: " ";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 1px;
+	border-bottom: 1px solid #D9D9D9;
+	color: #D9D9D9;
+	-webkit-transform-origin: 0 100%;
+	transform-origin: 0 100%;
+	-webkit-transform: scaleY(0.5);
+	transform: scaleY(0.5);
+}
+
+.count {
+	min-width: 2rem;
+}
+
+.jian {
+	display: block;
+	width: 0.6rem;
+	height: 0.6rem;
+	float: right;
+	margin-top: 0.85rem;
+	margin-left: 0.2rem;
+	background: url(../img/jian-up.svg) left top no-repeat;
+	background-size: 100% 100%;
+}
+
+.rotate180 {
+	transform: rotate(180deg);
+}
+
+
+/*双行列表*/
+
+.list-li {
+	width: 100%;
+	margin-bottom: 0.8rem;
+}
+
+.list-line2 {
+	position: relative;
+	width: 100%;
+	background: #ffffff;
+}
+
+.list-li2:before,
+.list-line2:before,
+.turn-bar:before,
+.img-list-cell:before {
+	content: " ";
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	height: 1px;
+	border-top: 1px solid #D9D9D9;
+	color: #D9D9D9;
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+	-webkit-transform: scaleY(0.5);
+	transform: scaleY(0.5);
+}
+
+.list-li2:after,
+.list-line2:after,
+.bind-cell:after,
+.turn-bar:after,
+.img-list-cell:after {
+	content: " ";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 1px;
+	border-bottom: 1px solid #D9D9D9;
+	color: #D9D9D9;
+	-webkit-transform-origin: 0 100%;
+	transform-origin: 0 100%;
+	-webkit-transform: scaleY(0.5);
+	transform: scaleY(0.5);
+}
+
+.list-line2 li {
+	position: relative;
+	height: 3rem;
+	padding: 0 15px 0 15px;
+}
+
+.shop-msg:before,
+.list-line2 li:before {
+	content: " ";
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	height: 1px;
+	border-top: 1px solid #D9D9D9;
+	color: #D9D9D9;
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+	-webkit-transform: scaleY(0.5);
+	transform: scaleY(0.5);
+	left: 15px;
+}
+
+.list-line2 li p {
+	display: flex;
+	justify-content: space-between;
+	font-size: 0.7rem;
+	line-height: 1.2rem;
+	color: #999999;
+}
+
+.list-line2 li p:first-child {
+	padding-top: 0.3rem;
+}
+
+
+/*跳转框*/
+
+.turn-bar {
+	position: relative;
+	width: 100%;
+	height: 2.3rem;
+	padding: 0 15px 0 15px;
+	background: #FFFFFF;
+	font-size: 0.8rem;
+	line-height: 2.3rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.turn-bar span:nth-child(2):after {
+	content: "";
+	display: block;
+	width: 0.6rem;
+	height: 0.6rem;
+	float: right;
+	margin-top: 0.85rem;
+	margin-left: 0.2rem;
+	background: url(../img/jian-right.svg) left top no-repeat;
+	background-size: 100% 100%;
+	opacity: 0.4;
+}
+
+
+/*提示框*/
+
+.state-msa {
+	display: none;
+	width: 5rem;
+	height: 2rem;
+	margin: 0 auto;
+	margin-top: 1rem;
+	font-size: 0.7rem;
+	color: #FFFFFF;
+	background: rgba(0, 0, 0, 0.6);
+	border-radius: 5px;
+	text-align: center;
+	line-height: 2rem;
+}
+
+.state-msg-block {
+	display: block;
+}
+
+
+/*图片列表*/
+
+.img-list-cell {
+	position: relative;
+	width: 100%;
+	height: 4.5rem;
+	padding-left: 15px;
+	margin-bottom: 0.25rem;
+	background: #FFFFFF;
+}
+
+.img-cell {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 5px;
+	float: left;
+	margin-right: 1rem;
+	margin-top: 0.75rem;
+}
+
+.img-cell img {
+	width: 100%;
+	height: 100%;
+}
+
+.txt1 {
+	font-size: 0.8rem;
+	font-weight: 500;
+	padding-top: 0.75rem;
+}
+
+.txt2 {
+	font-size: 0.7rem;
+	color: #666666;
+}
+
+
